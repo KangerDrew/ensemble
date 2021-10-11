@@ -8,6 +8,7 @@ For the final project, our group has decided to create a mock social media app t
 
 ## Entity Relationship Diagram
 
+!["ERD"](https://github.com/KangerDrew/ensemble/blob/master/server/docs/ERD.png)
 
 ## Primary Dependencies
 
