@@ -31,6 +31,10 @@ app.use('/api/applications', applicationsApiRoutes(db));
 const signupApiRoutes = require('./routes/signup');
 app.use('/api/signup', signupApiRoutes(db));
 
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('../client/src'))
+}
+
 server.listen(PORT, () => {
   // eslint-disable-next-line no-console
   console.log(`Express seems to be listening on port ${PORT} so that's pretty good 👍`);

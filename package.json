@@ -1,0 +1,22 @@
+{
+  "name": "ensemble",
+  "version": "1.0.0",
+  "description": "For the final project, our group has decided to create a mock social media app that can allow users to search, create, join bands with their preferences of genre and instruments. This project was built using React front-end, with PostgreSQL db and Express.js back-end.",
+  "main": "index.js",
+  "scripts": {
+    "install-frontend": "cd client && npm install",
+    "install-backend": "cd server && npm install",
+    "server-initialize": "cd server && npm start",
+    "heroku-postbuild": "npm run install-frontend && npm run install-backend && npm run server-initialize && cd client && npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KangerDrew/ensemble.git"
+  },
+  "author": "Drew Kang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KangerDrew/ensemble/issues"
+  },
+  "homepage": "https://github.com/KangerDrew/ensemble#readme"
+}
