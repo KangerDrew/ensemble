@@ -1,22 +1,21 @@
 {
-  "name": "ensemble",
+  "name": "express-back-end",
   "version": "1.0.0",
-  "description": "For the final project, our group has decided to create a mock social media app that can allow users to search, create, join bands with their preferences of genre and instruments. This project was built using React front-end, with PostgreSQL db and Express.js back-end.",
+  "description": "Boilerplate for the Express backend in an Express-React project",
   "main": "index.js",
+  "author": "garrettgsb",
+  "license": "MIT",
   "scripts": {
-    "install-frontend": "cd client && npm install",
-    "install-backend": "cd server && npm install",
-    "server-initialize": "cd server && npm start",
-    "heroku-postbuild": "npm run install-frontend && npm run install-backend && npm run server-initialize && cd client && npm start"
+    "go": "nodemon index.js",
+    "start": "node index.js",
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/KangerDrew/ensemble.git"
-  },
-  "author": "Drew Kang",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/KangerDrew/ensemble/issues"
-  },
-  "homepage": "https://github.com/KangerDrew/ensemble#readme"
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dotenv": "^10.0.0",
+    "express": "^4.16.4",
+    "nodemon": "^1.18.7",
+    "pg": "^8.7.1",
+    "socket.io": "^4.2.0"
+  }
 }
