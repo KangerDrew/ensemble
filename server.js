@@ -4,12 +4,14 @@ const server = require('http').createServer(app);
 const io = require('socket.io')(server);
 const PORT = process.env.PORT || 8081;
 const bodyParser = require('body-parser');
+const path = require('path');
 const db = require('./db/index');
 
 // Express Configuration
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.static('public'));
+
 
 // ROUTERS
 const loginApiRoutes = require('./routes/login');
@@ -30,6 +32,14 @@ const applicationsApiRoutes = require('./routes/applications');
 app.use('/api/applications', applicationsApiRoutes(db));
 const signupApiRoutes = require('./routes/signup');
 app.use('/api/signup', signupApiRoutes(db));
+
+
+// Serve static files
+if (process.env.NODE_ENV === "production") {
+  //server static content
+  app.use(express.static(path.join(__dirname, "client/build")));
+}
+
 
 server.listen(PORT, () => {
   // eslint-disable-next-line no-console
