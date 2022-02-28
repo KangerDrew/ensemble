@@ -136,7 +136,6 @@ export default function LoginRegister(props) {
           </div>
         </div>
       </div>
-      <div className="footer-push-down" />
       </div>
   );
 }
