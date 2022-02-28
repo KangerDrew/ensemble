@@ -5,6 +5,10 @@
   "main": "server.js",
   "author": "garrettgsb",
   "license": "MIT",
+  "engines": {
+    "node": "12.22.5",
+    "npm": "6.14.14"
+  },
   "scripts": {
     "go": "nodemon server.js",
     "start": "node server.js",
